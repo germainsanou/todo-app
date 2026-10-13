@@ -127,3 +127,8 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+REST_FRAMEWORK = {
+    # Application d'apprentissage, sans comptes utilisateurs
+    "DEFAULT_AUTHENTICATION_CLASSES": [],
+}
