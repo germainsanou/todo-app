@@ -9,3 +9,6 @@ ssh -T git@github.com
 - chore: pour la maintenance
 - docs: pour la documentation
 ex : git commit -m "chore: ajout du .gitignore"
+
+# Créer une nouvelle branche et basculer dessus
+git switch -c feat/backend-django
