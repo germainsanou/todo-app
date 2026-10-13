@@ -1,0 +1,7 @@
+.app { max-width: 480px; margin: 40px auto; padding: 0 16px; text-align: left; }
+.add-form { display: flex; gap: 8px; margin-bottom: 16px; }
+.add-form input { flex: 1; padding: 8px; }
+.todo-list { list-style: none; padding: 0; }
+.todo-list li { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #444; }
+.todo-list li.done label { text-decoration: line-through; opacity: 0.6; }
+.error { color: #e55; }
