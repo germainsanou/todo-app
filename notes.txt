@@ -1,0 +1,11 @@
+Notes DevOPS
+
+# TEST DE CONNEXION AVEC GITHUB
+ssh -T git@github.com
+
+# Principaux préfixe de la "Conventional Commits" : 
+- feat: pour une nouvelle fonctionnalité
+- fix: pour une correction
+- chore: pour la maintenance
+- docs: pour la documentation
+ex : git commit -m "chore: ajout du .gitignore"
