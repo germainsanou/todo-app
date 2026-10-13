@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.sqlite3
+
+# Django
+/backend/staticfiles/
+/backend/media/
+
+# Node / React
+node_modules/
+/frontend/dist/
+
+# Secrets : JAMAIS dans Git
+.env
+.env.*
+!.env.example
+
+# Éditeurs / système
+.vscode/
+.idea/
+.DS_Store
