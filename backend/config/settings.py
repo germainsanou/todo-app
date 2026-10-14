@@ -132,3 +132,7 @@ REST_FRAMEWORK = {
     # Application d'apprentissage, sans comptes utilisateurs
     "DEFAULT_AUTHENTICATION_CLASSES": [],
 }
+
+FRONTEND_DIST = BASE_DIR.parent / "frontend" / "dist"
+
+STATICFILES_DIRS = [FRONTEND_DIST]

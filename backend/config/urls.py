@@ -19,6 +19,7 @@ from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
 from todos.views import TodoViewSet
+from .views import frontend
 
 router = DefaultRouter()
 router.register("todos", TodoViewSet)
@@ -26,4 +27,5 @@ router.register("todos", TodoViewSet)
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include(router.urls)),
+    path("", frontend, name="frontend"),
 ]
