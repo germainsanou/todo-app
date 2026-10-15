@@ -158,3 +158,6 @@ REST_FRAMEWORK = {
 FRONTEND_DIST = BASE_DIR.parent / "frontend" / "dist"
 
 STATICFILES_DIRS = [FRONTEND_DIST]
+
+# Nginx indique dans l'en-tête X-Forwarded-Proto si la requête d'origine était en HTTPS
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")

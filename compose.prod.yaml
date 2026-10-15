@@ -1,0 +1,15 @@
+# Déploiement sur le VPS : pas de service « db »,
+# on utilise le PostgreSQL partagé du serveur via le réseau « pgnet ».
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "127.0.0.1:8001:8000"
+    networks:
+      - pgnet
+
+networks:
+  pgnet:
+    external: true
