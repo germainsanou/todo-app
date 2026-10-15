@@ -32,5 +32,5 @@ class TodoApiTests(APITestCase):
     def test_supprimer_une_tache(self):
         todo = Todo.objects.create(title="À supprimer")
         response = self.client.delete(f"{self.url}{todo.id}/")
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         self.assertEqual(Todo.objects.count(), 0)
