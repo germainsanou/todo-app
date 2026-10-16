@@ -51,7 +51,7 @@ function App() {
 
   return (
     <main className="app">
-      <h1>Mes tâches</h1>
+      <h1>Mes tâches ✅</h1>
 
       <form onSubmit={addTodo} className="add-form">
         <input
