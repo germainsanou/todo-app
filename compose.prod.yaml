@@ -2,7 +2,7 @@
 # on utilise le PostgreSQL partagé du serveur via le réseau « pgnet ».
 services:
   web:
-    build: .
+    image: ghcr.io/germainsanou/todo-app:${IMAGE_TAG:-latest}
     restart: unless-stopped
     env_file: .env
     ports:
