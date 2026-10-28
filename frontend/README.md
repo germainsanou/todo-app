@@ -1,16 +1,23 @@
-# React + Vite
+# Frontend Vue.js + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Interface de l'application, écrite en [Vue 3](https://vuejs.org/) (Composition API, composants monofichiers `.vue` avec `<script setup>`) et compilée par [Vite](https://vite.dev/).
 
-Currently, two official plugins are available:
+## Commandes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install       # installer les dépendances
+npm run dev       # serveur de dev sur http://localhost:5173 (les appels /api sont redirigés vers Django sur :8000)
+npm run lint      # analyse du code avec Oxlint (plugin vue activé)
+npm run build     # build de production dans dist/, servi ensuite par Django sous /static/
+```
 
-## React Compiler
+## Organisation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `index.html` : page d'entrée, contient `<div id="app">`
+- `src/main.js` : crée l'application Vue et la monte sur `#app`
+- `src/App.vue` : composant racine
+- `vite.config.js` : plugin Vue, `base: "/static/"` au build, proxy `/api` en dev
 
-## Expanding the Oxlint configuration
+## Outillage conseillé
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+VS Code avec l'extension officielle [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar).

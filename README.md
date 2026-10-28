@@ -1,6 +1,6 @@
 # Todo App
 
-Application de gestion de tâches : Django (API) + React (interface), déployée en monolithe avec Docker.
+Application de gestion de tâches : Django (API) + Vue.js (interface), déployée en monolithe avec Docker.
 
 ## Développement local
 
