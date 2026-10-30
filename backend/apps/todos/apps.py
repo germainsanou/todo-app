@@ -2,4 +2,5 @@ from django.apps import AppConfig
 
 
 class TodosConfig(AppConfig):
-    name = 'todos'
+    name = "apps.todos"
+    verbose_name = "Tâches"
