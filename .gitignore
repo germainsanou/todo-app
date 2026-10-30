@@ -8,7 +8,7 @@ __pycache__/
 /backend/staticfiles/
 /backend/media/
 
-# Node / React
+# Node / Vue.js
 node_modules/
 /frontend/dist/
 

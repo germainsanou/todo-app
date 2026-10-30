@@ -1,4 +1,4 @@
-# ============ Étape 1 : compiler React ============
+# ============ Étape 1 : compiler Vue.js ============
 FROM node:24-alpine AS frontend
 
 WORKDIR /app/frontend
@@ -28,7 +28,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Code Django
 COPY backend/ ./
 
-# On récupère UNIQUEMENT le build React de l'étape 1
+# On récupère UNIQUEMENT le build Vue.js de l'étape 1
 COPY --from=frontend /app/frontend/dist /app/frontend/dist
 
 # Rassembler les fichiers statiques
